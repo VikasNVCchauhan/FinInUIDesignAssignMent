@@ -1,180 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="2"
     android:orientation="vertical"
     android:weightSum="2"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:background="@drawable/top_background"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp">
 
+        <ImageView
+
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_group_logo_finin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/ic_group_logo_finin" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
             android:layout_marginTop="35dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="20dp"
-            android:src="@drawable/ic_group_card_finin">
+            android:src="@drawable/ic_group_card_finin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </ImageView>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/muli_black"
+        android:text="@string/text1"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/muli_black"
+        android:text="@string/text2"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <LinearLayout
-            android:id="@+id/linear_layout_bottom_top"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/text_view_new_approach_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/muli_extra_bold"
-                android:text="@string/text1"
-                android:textColor="@color/textColor"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/muli_extra_bold"
-                android:text="@string/text2"
-                android:textColor="@color/textColor"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/linear_layout_terms_conditions"
-            android:layout_below="@+id/linear_layout_bottom_top"
-            android:gravity="center"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:weightSum="3">
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="20sp"
                     android:fontFamily="@font/muli_bold"
                     android:text="Hindi"
-                    android:textSize="12.5sp" />
+                    android:textColor="@color/silverColor" />
 
                 <TextView
-
+                    android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30sp"
-                    android:layout_marginRight="30sp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="15sp"
                     android:fontFamily="@font/muli_bold"
                     android:text="English"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    tools:layout_editor_absoluteX="94dp"
+                    tools:layout_editor_absoluteY="1dp" />
 
                 <TextView
+                    android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
                     android:fontFamily="@font/muli_bold"
                     android:text="Kannada"
-                    android:textSize="12.5sp" />
+                    android:textColor="@color/silverColor"
+                    tools:layout_editor_absoluteX="197dp" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linear_layout_buttons"
+                android:padding="1dp"
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:weightSum="2">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
                     android:background="@drawable/login_button_background"
                     android:text="Login"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="19dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:background="@drawable/register_button_background_"
                     android:text="Register"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    tools:layout_editor_absoluteY="0dp" />
             </LinearLayout>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:id="@+id/linear_layout_terms_conditions"
-            android:layout_width="match_parent"
+        <TextView
+            android:fontFamily="@font/muli_bold"
+            android:textSize="13sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="30sp"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:text="@string/registration"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/text_view_click_on_registration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="3sp"
-                android:text="By Clicking on register you agree on"
-                android:textColor="@android:color/black"
-                android:textSize="12.5sp" />
+        <TextView
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/muli_bold"
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/finin_terms"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/text_view_terms_and_condition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/finin_terms"
-                android:textColor="@android:color/black"
-                android:textSize="12.5sp" />
-        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </RelativeLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

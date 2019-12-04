@@ -2,5 +2,6 @@
     <string name="app_name">FinInUIDesign</string>
     <string name="text1">A NEW APPROACH</string>
     <string name="text2">TO THE BANKING</string>
+    <string name="registration">By Clicking on register you agree on</string>
     <string name="finin_terms" tools:ignore="StringEscaping"><u>Finin Terms &amp; Conditions.</u></string>
 </resources>
