@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#22D3BFF0</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorGradientCenter">#36B0CBFF</color>
+    <color name="colorGradientEnd">#146995FF</color>
+    <color name="topColor">#22D3BFF0</color>
+    <color name="textColor">#121247</color>
+    <color name="registerButtonColor">#0B0B2E</color>
+    <color name="silverColor">#CFCFCF</color>
 </resources>
